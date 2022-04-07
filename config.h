@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel size of windows */
+static const unsigned int borderpx  = 4;        /* border pixel size of windows */
 static const unsigned int gappx     = 16;        /* gaps size between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -12,10 +12,10 @@ static const char *fonts[]          = { "Liberation Mono:size=12" };
 static const char dmenufont[]       = "Liberation Mono:size=12";
 //background color
 static const char normbgcolor[]     = "#222222";
-static const char normbordercolor[] = "#222222";
+static const char normbordercolor[] = "#b36d36";
 static const char normfgcolor[]     = "#bbbbbb";
 static const char selfgcolor[]      = "#bbbbbb";
-static const char selbordercolor[]  = "#222222";
+static const char selbordercolor[]  = "#4d6f9e";
 static const char selbgcolor[]      = "#222222";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "I", "II", "III" };
+static const char *tags[] = { "-", "-", "-" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -103,6 +103,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5") },	
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5") },
+	{ 0,                            XF86XK_AudioMute,        spawn, SHCMD("pamixer -t") },
 	{ MODKEY,              		    XK_n,      shiftview,  	   { .i = +1 } },
 	{ MODKEY,              		    XK_b,      shiftview,      { .i = -1 } },
 	TAGKEYS(                        XK_1,                      0)
