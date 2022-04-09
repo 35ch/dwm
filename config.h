@@ -3,20 +3,20 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel size of windows */
-static const unsigned int gappx     = 16;        /* gaps size between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int borderpx  = 2;        /* border pixel size of windows */
+static const unsigned int gappx     = 8;        /* gaps size between windows */
+static const unsigned int snap      = 8;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Liberation Mono:size=12" };
-static const char dmenufont[]       = "Liberation Mono:size=12";
+static const char *fonts[]          = { "Hack:size=12" };
+static const char dmenufont[]       = "Hack:size=12";
 //background color
-static const char normbgcolor[]     = "#222222";
+static const char normbgcolor[]     = "#201d19";
 static const char normbordercolor[] = "#b36d36";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selfgcolor[]      = "#bbbbbb";
-static const char selbordercolor[]  = "#4d6f9e";
-static const char selbgcolor[]      = "#222222";
+static const char normfgcolor[]     = "#bcaba2";
+static const char selfgcolor[]      = "#bcaba2";
+static const char selbordercolor[]  = "#b36d36";
+static const char selbgcolor[]      = "#201d19";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
